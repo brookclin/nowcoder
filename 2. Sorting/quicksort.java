@@ -10,15 +10,15 @@ public class QuickSort {
         int i = lo, j = hi + 1;
         int v = A[lo];
         while (true) {
-            while (A[++i] < v) {
+            while (A[++i] < v) { //左边小于v跳过，大于v取出来交换
                 if (i == hi)
                     break;
             }
-            while (A[--j] > v) {
+            while (A[--j] > v) { //右边同理
                 if (j == lo)
                     break;
             }
-            if (i >= j) break;
+            if (i >= j) break; //
             int temp = A[i];
             A[i] = A[j];
             A[j] = temp;
